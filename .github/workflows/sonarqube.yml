@@ -30,7 +30,7 @@ jobs:
         distribution: temurin
 
     - name: Install SonarScanner
-      uses: SonarSource/sonar-scanner-cli-action@v2
+      uses: SonarSource/sonarqube-scan-action@v6
 
     - name: Run SonarScanner
       run: sonar-scanner
