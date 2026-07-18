@@ -29,11 +29,7 @@ jobs:
         java-version: '17'
         distribution: temurin
 
-    - name: Install SonarScanner
+    - name: Analyze with SonarCloud
       uses: SonarSource/sonarqube-scan-action@v6
-
-    - name: Run SonarScanner
-      run: sonar-scanner
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: https://sonarcloud.io
